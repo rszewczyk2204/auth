@@ -1,0 +1,21 @@
+name: Java CI with Maven
+
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Push To Gitlab
+        env:
+          token: ${{ secrets.GITLAB_TOKEN }}
+        run: |
+          git config user.name ${{ secrets.GITLAB_USERNAME }}
+          git config user.email ${{ secrets.GITLAB_EMAIL }}
+          git remote set-url origin "https://oauth2:${token}@gitlab.com/backend8722418/stack/auth.git"
+          git branch -M main
+          git push -uf origin main
