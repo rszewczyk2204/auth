@@ -14,6 +14,11 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>ci</module>
+        <module>auth-server</module>
+    </modules>
+
     <repositories>
         <repository>
             <id>gitlab-maven</id>
