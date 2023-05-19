@@ -1,3 +1,4 @@
 /target/
 /.idea/
 /ci/ci.iml
+/auth-server/auth-server.iml
