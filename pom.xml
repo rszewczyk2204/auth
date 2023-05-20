@@ -17,6 +17,7 @@
     <modules>
         <module>ci</module>
         <module>auth-server</module>
+        <module>auth-api</module>
     </modules>
 
     <properties>
@@ -97,6 +98,11 @@
             <dependency>
                 <groupId>pl.com.bit</groupId>
                 <artifactId>common-api</artifactId>
+                <version>${bit.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>pl.com.bit</groupId>
+                <artifactId>common-feign</artifactId>
                 <version>${bit.common.version}</version>
             </dependency>
             <dependency>
